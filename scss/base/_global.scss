@@ -1,0 +1,8 @@
+@use './fonts' as f;
+
+h1,h2,h3,h4,h5,h6{
+    font-family: nth($list: f.$font, $n: 1), sans-serif;
+}
+body{
+    font-family: nth($list: f.$font, $n: 2), sans-serif;
+}
