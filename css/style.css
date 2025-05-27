@@ -1,10 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Bebas Neue", sans-serif;
+:root {
+  --white: #fff;
+  --black: #000;
+  --grey: hsl(0, 0%, 95%);
+  --primary: hsl(4, 62%, 53%);
+  --header-font-size: 4.5rem;
+  --title-font-size: 1.5rem;
+  --body-font-size: 1.25rem;
+  --header-font-weight: 400;
+  --title-font-weight: 400;
+  --body-font-weight: 400;
+  --body-highlight-font-weight: 600;
+  --header-line-height: 5.375rem;
+  --title-line-height: 1.75rem;
+  --body-line-height: 1.5rem;
 }
 
 body {
+  background-color: var(--grey);
   font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: var(--body-font-weight);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  color: var(--black);
+}
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-weight: var(--header-font-weight);
+  font-size: var(--header-font-size);
+  line-height: var(--header-line-height);
+  color: var(--black);
+}
+
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-weight: var(--title-font-weight);
+  font-size: var(--title-font-size);
+  line-height: var(--title-line-height);
+  color: var(--black);
+  text-decoration: underline var(--primary);
+  text-decoration-thickness: 0.1875rem;
+  text-underline-offset: 0.25rem;
 }
 
 @layer base {

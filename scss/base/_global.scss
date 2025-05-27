@@ -1,8 +1,50 @@
 @use './fonts' as f;
+@use '../utils/fonctions' as fun;
+@use '../utils/variables' as v;
 
-h1,h2,h3,h4,h5,h6{
-    font-family: nth($list: f.$font, $n: 1), sans-serif;
+:root{
+    // Couleurs
+    @each $color, $value in v.$colors{
+        --#{$color}: #{$value};
+    }
+    // Font-size
+    @each $selecteur, $value in v.$font-size{
+        --#{$selecteur}-font-size: #{$value};
+    }
+    // Font-weight
+    @each $selecteur, $value in v.$font-weight{
+        --#{$selecteur}-font-weight: #{$value};
+    }
+    // Line-height
+    @each $selecteur, $value in v.$line-height{
+        --#{$selecteur}-line-height: #{$value};
+    }
 }
 body{
+    background-color: var(--grey);
     font-family: nth($list: f.$font, $n: 2), sans-serif;
+    font-style: normal;
+    font-weight: var( --body-font-weight);
+    font-size: var( --body-font-size);
+    line-height: var(--body-line-height);
+    color: var(--black);
+}
+h1{
+    font-family: nth($list: f.$font, $n: 1), sans-serif;
+    font-style: normal;
+    font-weight: var( --header-font-weight);
+    font-size: var( --header-font-size);
+    line-height: var(--header-line-height);
+    color: var(--black);
+}
+h2{
+    font-family: nth($list: f.$font, $n: 1), sans-serif;
+    font-style: normal;
+    font-weight: var( --title-font-weight);
+    font-size: var( --title-font-size);
+    line-height: var(--title-line-height);
+    color: var(--black);
+    text-decoration: underline var(--primary);
+    text-decoration-thickness: fun.convertToRem(3);
+    text-underline-offset: fun.convertToRem(4);
 }
