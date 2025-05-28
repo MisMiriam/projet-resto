@@ -1,0 +1,50 @@
+@use '../utils/fonctions' as fun;
+@use '../utils/mixins' as m;
+
+.page__home{
+    // Hero Section
+    & section:first-child{
+        display: flex;
+        align-items: center;
+        & div{
+            width: 100%;
+        }
+        & span{
+            color: var(--primary);
+        }
+        img{
+            width: 50%;
+        }
+        .btn{
+            margin-top: fun.convertToRem(24);
+        }
+    }
+    // section contact balise <strong>
+    strong.highlight,
+    p.highlight{
+        font-weight: var( --body-highlight-font-weight);
+    }
+    // Section adresses
+    & section:nth-child(2) div{
+        display: flex;
+        justify-content: center;
+        gap: fun.convertToRem(40);
+        text-align: left;
+        
+    }
+    // Section a propos
+    & section:nth-child(4) p{
+        text-align: left;
+    }
+    // Section réseaux
+    & section:nth-last-child(2){
+        margin-inline: fun.convertToRem(100);
+        & div{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(250px, 1fr));
+            gap: fun.convertToRem(70);
+        }
+    }    
+        
+}

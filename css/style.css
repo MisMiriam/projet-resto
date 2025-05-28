@@ -61,6 +61,11 @@ section {
   text-align: center;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 @layer base {
   /*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
   /*
@@ -317,6 +322,45 @@ a.btn {
 a.btn:hover {
   color: rgb(229.5, 229.5, 229.5);
   background-color: rgb(38.25, 38.25, 38.25);
+}
+
+.page__home section:first-child {
+  display: flex;
+  align-items: center;
+}
+.page__home section:first-child div {
+  width: 100%;
+}
+.page__home section:first-child span {
+  color: var(--primary);
+}
+.page__home section:first-child img {
+  width: 50%;
+}
+.page__home section:first-child .btn {
+  margin-top: 1.5rem;
+}
+.page__home strong.highlight,
+.page__home p.highlight {
+  font-weight: var(--body-highlight-font-weight);
+}
+.page__home section:nth-child(2) div {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  text-align: left;
+}
+.page__home section:nth-child(4) p {
+  text-align: left;
+}
+.page__home section:nth-last-child(2) {
+  margin-inline: 6.25rem;
+}
+.page__home section:nth-last-child(2) div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 4.375rem;
 }
 
 .page__contact .section__cta + section h1 {
