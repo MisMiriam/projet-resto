@@ -285,6 +285,21 @@ section {
   color: var(--grey);
 }
 
+.section-cta {
+  background-color: var(--primary);
+  padding: 3.75rem 0;
+  text-align: center;
+}
+.section-cta .highlight {
+  margin: 0 0 1rem 0;
+  font-family: var(--body-ff), sans-serif;
+  font-style: normal;
+  font-weight: var(--body-highlight-font-weight);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  color: var(--white);
+}
+
 a.btn {
   font-family: var(--title-ff), sans-serif;
   font-style: normal;

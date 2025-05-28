@@ -1,0 +1,18 @@
+@use '../utils/mixins' as m;
+@use '../utils/fonctions' as fun;
+
+.section-cta{
+    background-color: var(--primary);
+    padding: fun.convertToRem(60) 0;
+    text-align: center;
+    .highlight{
+        margin: 0 0 1rem 0;
+        @include m.text-config(
+            $font: var(--body-ff), 
+            $fw: var( --body-highlight-font-weight),
+            $fs: var( --body-font-size),
+            $l-height: var(--body-line-height),
+            $clr: var(--white)
+        );
+    }
+}
