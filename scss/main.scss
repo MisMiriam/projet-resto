@@ -1,5 +1,5 @@
 @use './base/global';
 @use './vendors/modern-normalize.css';
-@use './components/navbar';
+@use './layout/navbar';
+@use './layout/footer';
 @use './components/button';
-@use './components/footer';

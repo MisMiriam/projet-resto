@@ -261,24 +261,6 @@ section {
   margin-right: 1rem;
 }
 
-a.btn {
-  font-family: var(--title-ff), sans-serif;
-  font-style: normal;
-  font-weight: var(--title-font-weight);
-  font-size: var(--title-font-size);
-  line-height: var(--title-line-height);
-  color: var(--white);
-  text-decoration: none;
-  text-transform: capitalize;
-  background-color: var(--black);
-  padding: 1rem 2.5rem;
-  display: inline-block;
-}
-a.btn:hover {
-  color: rgb(229.5, 229.5, 229.5);
-  background-color: rgb(38.25, 38.25, 38.25);
-}
-
 .footer {
   background-color: var(--black);
   padding: 2.5rem 1rem;
@@ -301,6 +283,24 @@ a.btn:hover {
 }
 .footer .f-nav__icon:hover {
   color: var(--grey);
+}
+
+a.btn {
+  font-family: var(--title-ff), sans-serif;
+  font-style: normal;
+  font-weight: var(--title-font-weight);
+  font-size: var(--title-font-size);
+  line-height: var(--title-line-height);
+  color: var(--white);
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: var(--black);
+  padding: 1rem 2.5rem;
+  display: inline-block;
+}
+a.btn:hover {
+  color: rgb(229.5, 229.5, 229.5);
+  background-color: rgb(38.25, 38.25, 38.25);
 }
 
 /*# sourceMappingURL=style.css.map */
