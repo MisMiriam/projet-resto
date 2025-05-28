@@ -1,0 +1,21 @@
+@use '../utils/fonctions' as fun;
+@use '../utils/mixins' as m;
+
+.page__contact{
+    // balise <strong>
+    .highlight{
+        font-weight: var( --body-highlight-font-weight);
+    }
+    // Section adresses
+    .section__cta + section{
+        h1{
+            margin-bottom: fun.convertToRem(40) ;
+        }
+        div{
+        display: flex;
+        justify-content: center;
+        gap: fun.convertToRem(40);
+        text-align: left;
+        }
+    }
+}

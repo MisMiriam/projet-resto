@@ -40,6 +40,7 @@ h1 {
   font-size: var(--heading-font-size);
   line-height: var(--heading-line-height);
   color: var(--black);
+  margin: 0;
 }
 
 h2 {
@@ -56,6 +57,8 @@ h2 {
 
 section {
   margin: 1.875rem 0;
+  padding: 1.875rem 3.75rem;
+  text-align: center;
 }
 
 @layer base {
@@ -285,12 +288,10 @@ section {
   color: var(--grey);
 }
 
-.section-cta {
+.section__cta {
   background-color: var(--primary);
-  padding: 3.75rem 0;
-  text-align: center;
 }
-.section-cta .highlight {
+.section__cta .highlight {
   margin: 0 0 1rem 0;
   font-family: var(--body-ff), sans-serif;
   font-style: normal;
@@ -316,6 +317,19 @@ a.btn {
 a.btn:hover {
   color: rgb(229.5, 229.5, 229.5);
   background-color: rgb(38.25, 38.25, 38.25);
+}
+
+.page__contact .highlight {
+  font-weight: var(--body-highlight-font-weight);
+}
+.page__contact .section__cta + section h1 {
+  margin-bottom: 2.5rem;
+}
+.page__contact .section__cta + section div {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  text-align: left;
 }
 
 /*# sourceMappingURL=style.css.map */

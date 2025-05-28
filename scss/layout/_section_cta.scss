@@ -1,10 +1,8 @@
 @use '../utils/mixins' as m;
 @use '../utils/fonctions' as fun;
 
-.section-cta{
+.section__cta{
     background-color: var(--primary);
-    padding: fun.convertToRem(60) 0;
-    text-align: center;
     .highlight{
         margin: 0 0 1rem 0;
         @include m.text-config(
