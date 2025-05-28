@@ -1,0 +1,22 @@
+@use '../utils/fonctions' as fun;
+@use '../utils/mixins' as m;
+@use '../base/fonts' as f;
+
+a.btn{
+    @include m.text-config(
+        $font: var(--title-ff), 
+        $fw: var( --title-font-weight),
+        $fs: var( --title-font-size),
+        $l-height: var(--title-line-height),
+        $clr: var(--white)
+    );
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: var(--black);
+    padding: 1rem fun.convertToRem(40);
+    display: inline-block;
+    &:hover{
+        color: darken($color: #ffffff, $amount: 10);
+        background-color: lighten($color: #000000, $amount: 15);
+    }
+}

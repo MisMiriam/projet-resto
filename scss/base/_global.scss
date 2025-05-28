@@ -56,3 +56,6 @@ h2{
     );
     @include m.text-underline();
 }
+section{
+    margin: fun.convertToRem(30) 0;
+}
