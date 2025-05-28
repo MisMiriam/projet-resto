@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yummy Nouilles - Accueil</title>
+    <title>Yummy Nouilles - Menu</title>
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Font awesome -->
@@ -14,12 +14,14 @@
   </head>
   <body>
     <header>
-      <nav>
-        <a href="#"><img src="logo.svg" alt="Logo Yummy Nouilles" /></a>
+      <nav class="navbar">
+        <a href="#" class="navbar__icon"
+          ><img src="logo.svg" alt="Logo Yummy Nouilles"
+        /></a>
         <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a class="navbar__link" href="index.html">Accueil</a></li>
+          <li><a class="navbar__link active" href="menu.html">Menu</a></li>
+          <li><a class="navbar__link" href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
