@@ -1,0 +1,25 @@
+@use '../utils/fonctions' as fun;
+
+.footer{
+    background-color: var(--black);
+    padding: 2.5rem 1rem;
+    .f-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        gap: fun.convertToRem(24);
+        list-style: none;
+        li {
+            margin-right: 1rem;
+        }
+        &__icon{
+            width: fun.convertToRem(36);
+            height: fun.convertToRem(36);
+            color: var(--white);
+            &:hover{
+                color: var(--grey);
+            }
+        }
+    }
+}

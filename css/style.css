@@ -257,4 +257,28 @@ h2 {
   margin-right: 1rem;
 }
 
+.footer {
+  background-color: var(--black);
+  padding: 2.5rem 1rem;
+}
+.footer .f-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+.footer .f-nav li {
+  margin-right: 1rem;
+}
+.footer .f-nav__icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--white);
+}
+.footer .f-nav__icon:hover {
+  color: var(--grey);
+}
+
 /*# sourceMappingURL=style.css.map */
