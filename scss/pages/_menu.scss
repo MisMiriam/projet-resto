@@ -1,0 +1,51 @@
+@use '../utils/fonctions' as fun;
+@use '../utils/mixins' as m;
+
+.page__menu{
+    // Section menu
+    .section__cta + section{
+        margin-bottom: 0;
+        & div:first-child{
+            text-align: left;
+            margin-bottom: fun.convertToRem(40);
+            & p {
+                margin: 0;
+            }
+            & span{
+                color: var(--primary);
+            }
+        }
+        & div:last-child{
+            background-color: var(--white);
+            padding: fun.convertToRem(30) fun.convertToRem(24);
+            & article{
+                margin-bottom: fun.convertToRem(60);
+            }
+            & img{
+                width: fun.convertToRem(128);
+                height: fun.convertToRem(128);
+            }
+            & h3{
+                @include m.text-config(
+                    $font: var(--title-ff), 
+                    $fw: var( --title-font-weight),
+                    $fs: var( --title-font-size),
+                    $l-height: var(--title-line-height),
+                    $clr: var(--black)
+                );
+                text-decoration: underline var(--primary);
+                text-decoration-thickness: fun.convertToRem(3);
+                text-underline-offset: fun.convertToRem(20);
+                margin-bottom: fun.convertToRem(48);
+            }
+            & p.highlight{
+                margin-top: fun.convertToRem(48);
+            }
+        }
+
+    }
+    strong.highlight,
+    p.highlight{
+        font-weight: var( --body-highlight-font-weight);
+    }
+}

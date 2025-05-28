@@ -319,9 +319,6 @@ a.btn:hover {
   background-color: rgb(38.25, 38.25, 38.25);
 }
 
-.page__contact .highlight {
-  font-weight: var(--body-highlight-font-weight);
-}
 .page__contact .section__cta + section h1 {
   margin-bottom: 2.5rem;
 }
@@ -330,6 +327,53 @@ a.btn:hover {
   justify-content: center;
   gap: 2.5rem;
   text-align: left;
+}
+.page__contact strong.highlight {
+  font-weight: var(--body-highlight-font-weight);
+}
+
+.page__menu .section__cta + section {
+  margin-bottom: 0;
+}
+.page__menu .section__cta + section div:first-child {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+.page__menu .section__cta + section div:first-child p {
+  margin: 0;
+}
+.page__menu .section__cta + section div:first-child span {
+  color: var(--primary);
+}
+.page__menu .section__cta + section div:last-child {
+  background-color: var(--white);
+  padding: 1.875rem 1.5rem;
+}
+.page__menu .section__cta + section div:last-child article {
+  margin-bottom: 3.75rem;
+}
+.page__menu .section__cta + section div:last-child img {
+  width: 8rem;
+  height: 8rem;
+}
+.page__menu .section__cta + section div:last-child h3 {
+  font-family: var(--title-ff), sans-serif;
+  font-style: normal;
+  font-weight: var(--title-font-weight);
+  font-size: var(--title-font-size);
+  line-height: var(--title-line-height);
+  color: var(--black);
+  text-decoration: underline var(--primary);
+  text-decoration-thickness: 0.1875rem;
+  text-underline-offset: 1.25rem;
+  margin-bottom: 3rem;
+}
+.page__menu .section__cta + section div:last-child p.highlight {
+  margin-top: 3rem;
+}
+.page__menu strong.highlight,
+.page__menu p.highlight {
+  font-weight: var(--body-highlight-font-weight);
 }
 
 /*# sourceMappingURL=style.css.map */
