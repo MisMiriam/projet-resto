@@ -1,11 +1,15 @@
 @use './fonts' as f;
-@use '../utils/fonctions' as fun;
 @use '../utils/variables' as v;
-
+@use '../utils/fonctions' as fun;
+@use '../utils/mixins' as m;
 :root{
     // Couleurs
     @each $color, $value in v.$colors{
         --#{$color}: #{$value};
+    }
+    // Font-family
+    @each $selecteur, $font in f.$ff{
+        --#{$selecteur}-ff: "#{$font}";
     }
     // Font-size
     @each $selecteur, $value in v.$font-size{
@@ -20,31 +24,35 @@
         --#{$selecteur}-line-height: #{$value};
     }
 }
+*{
+    padding: 0;
+}
 body{
     background-color: var(--grey);
-    font-family: nth($list: f.$font, $n: 2), sans-serif;
-    font-style: normal;
-    font-weight: var( --body-font-weight);
-    font-size: var( --body-font-size);
-    line-height: var(--body-line-height);
-    color: var(--black);
+    @include m.text-config(   
+        $font: var(--body-ff), 
+        $fw: var( --body-font-weight),
+        $fs: var( --body-font-size),
+        $l-height: var(--body-line-height),
+        $clr: var(--black)
+    );
 }
 h1{
-    font-family: nth($list: f.$font, $n: 1), sans-serif;
-    font-style: normal;
-    font-weight: var( --header-font-weight);
-    font-size: var( --header-font-size);
-    line-height: var(--header-line-height);
-    color: var(--black);
+    @include m.text-config(   
+        $font: var(--heading-ff), 
+        $fw: var( --heading-font-weight),
+        $fs: var( --heading-font-size),
+        $l-height: var(--heading-line-height),
+        $clr: var(--black)
+    );
 }
 h2{
-    font-family: nth($list: f.$font, $n: 1), sans-serif;
-    font-style: normal;
-    font-weight: var( --title-font-weight);
-    font-size: var( --title-font-size);
-    line-height: var(--title-line-height);
-    color: var(--black);
-    text-decoration: underline var(--primary);
-    text-decoration-thickness: fun.convertToRem(3);
-    text-underline-offset: fun.convertToRem(4);
+    @include m.text-config(   
+        $font: var(--title-ff), 
+        $fw: var( --title-font-weight),
+        $fs: var( --title-font-size),
+        $l-height: var(--title-line-height),
+        $clr: var(--black)
+    );
+    @include m.text-underline();
 }

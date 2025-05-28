@@ -1,0 +1,15 @@
+@use './fonctions' as fun;
+
+@mixin text-config($font, $f-style: normal, $fw, $fs, $l-height, $clr){
+    font-family: $font, sans-serif;
+    font-style: $f-style;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $l-height;
+    color: $clr;
+}
+@mixin text-underline(){
+    text-decoration: underline var(--primary);
+    text-decoration-thickness: fun.convertToRem(3);
+    text-underline-offset: fun.convertToRem(4);
+}

@@ -4,21 +4,28 @@
   --black: #000;
   --grey: hsl(0, 0%, 95%);
   --primary: hsl(4, 62%, 53%);
-  --header-font-size: 4.5rem;
+  --heading-ff: "Bebas Neue";
+  --title-ff: "Bebas Neue";
+  --body-ff: "Montserrat";
+  --heading-font-size: 4.5rem;
   --title-font-size: 1.5rem;
   --body-font-size: 1.25rem;
-  --header-font-weight: 400;
+  --heading-font-weight: 400;
   --title-font-weight: 400;
   --body-font-weight: 400;
   --body-highlight-font-weight: 600;
-  --header-line-height: 5.375rem;
+  --heading-line-height: 5.375rem;
   --title-line-height: 1.75rem;
   --body-line-height: 1.5rem;
 }
 
+* {
+  padding: 0;
+}
+
 body {
   background-color: var(--grey);
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--body-ff), sans-serif;
   font-style: normal;
   font-weight: var(--body-font-weight);
   font-size: var(--body-font-size);
@@ -27,16 +34,16 @@ body {
 }
 
 h1 {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: var(--heading-ff), sans-serif;
   font-style: normal;
-  font-weight: var(--header-font-weight);
-  font-size: var(--header-font-size);
-  line-height: var(--header-line-height);
+  font-weight: var(--heading-font-weight);
+  font-size: var(--heading-font-size);
+  line-height: var(--heading-line-height);
   color: var(--black);
 }
 
 h2 {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: var(--title-ff), sans-serif;
   font-style: normal;
   font-weight: var(--title-font-weight);
   font-size: var(--title-font-size);
@@ -215,6 +222,39 @@ h2 {
   summary {
     display: list-item;
   }
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0 1rem 3rem;
+  gap: 2rem;
+}
+.navbar__icon {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.navbar__link {
+  font-family: var(--body-ff), sans-serif;
+  font-style: normal;
+  font-weight: var(--body-font-weight);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  color: var(--black);
+  text-decoration: none;
+}
+.navbar__link:hover, .navbar__link.active {
+  text-decoration: underline var(--primary);
+  text-decoration-thickness: 0.1875rem;
+  text-underline-offset: 0.25rem;
+}
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+}
+.navbar ul li {
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,37 @@
+@use '../utils/fonctions' as fun;
+@use '../utils/mixins' as m;
+@use '../base/fonts' as f;
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0 1rem 3rem;
+    gap: fun.convertToRem(32);
+    &__icon{
+        width: fun.convertToRem(72);
+        height: fun.convertToRem(72);
+    }
+    &__link{
+        @include m.text-config(
+            $font: var(--body-ff), 
+            $fw: var( --body-font-weight),
+            $fs: var( --body-font-size),
+            $l-height: var(--body-line-height),
+            $clr: var(--black)
+        );
+        text-decoration: none;
+        &:hover,
+        &.active{
+            @include m.text-underline();
+        }
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+        li {
+            margin-right: 1rem;
+        }
+    }
+}
