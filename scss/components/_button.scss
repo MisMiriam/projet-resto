@@ -14,6 +14,7 @@ a.btn{
     background-color: var(--black);
     padding: 1rem fun.convertToRem(40);
     display: inline-block;
+    // utiliser des variables
     &:hover{
         color: darken($color: #ffffff, $amount: 10);
         background-color: lighten($color: #000000, $amount: 15);

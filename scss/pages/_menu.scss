@@ -26,26 +26,12 @@
                 height: fun.convertToRem(128);
             }
             & h3{
-                @include m.text-config(
-                    $font: var(--title-ff), 
-                    $fw: var( --title-font-weight),
-                    $fs: var( --title-font-size),
-                    $l-height: var(--title-line-height),
-                    $clr: var(--black)
-                );
-                text-decoration: underline var(--primary);
-                text-decoration-thickness: fun.convertToRem(3);
-                text-underline-offset: fun.convertToRem(20);
+                @include m.text-underline($offset: fun.convertToRem(20));
                 margin-bottom: fun.convertToRem(48);
             }
             & p.highlight{
                 margin-top: fun.convertToRem(48);
             }
         }
-
-    }
-    strong.highlight,
-    p.highlight{
-        font-weight: var( --body-highlight-font-weight);
     }
 }

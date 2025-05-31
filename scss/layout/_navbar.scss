@@ -21,7 +21,7 @@
         text-decoration: none;
         &:hover,
         &.active{
-            @include m.text-underline();
+            @include m.text-underline;
         }
     }
     ul{

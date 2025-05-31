@@ -47,7 +47,7 @@ h1{
     );
     margin: 0;
 }
-h2{
+h2, h3{
     @include m.text-config(   
         $font: var(--title-ff), 
         $fw: var( --title-font-weight),
@@ -55,7 +55,7 @@ h2{
         $l-height: var(--title-line-height),
         $clr: var(--black)
     );
-    @include m.text-underline();
+    @include m.text-underline;
 }
 section{
     margin: fun.convertToRem(30) 0;
@@ -63,6 +63,9 @@ section{
     text-align: center;
 }
 img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
+}
+.highlight{
+    font-weight: var(--body-highlight-font-weight);
 }

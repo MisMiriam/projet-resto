@@ -8,8 +8,8 @@
     line-height: $l-height;
     color: $clr;
 }
-@mixin text-underline(){
+@mixin text-underline($offset: fun.convertToRem(4)){
     text-decoration: underline var(--primary);
     text-decoration-thickness: fun.convertToRem(3);
-    text-underline-offset: fun.convertToRem(4);
+    text-underline-offset: $offset;
 }
