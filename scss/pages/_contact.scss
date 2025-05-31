@@ -1,9 +1,9 @@
 @use '../utils/fonctions' as fun;
 @use '../utils/mixins' as m;
 
-.page__contact{
+#page__contact{
     // Section adresses
-    .section__cta + section{
+    & .section__cta + section{
         h1{
             margin-bottom: fun.convertToRem(40) ;
         }

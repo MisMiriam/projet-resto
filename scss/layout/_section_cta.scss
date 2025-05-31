@@ -2,7 +2,7 @@
 
 .section__cta{
     background-color: var(--primary);
-    .highlight{
+    & .highlight{
         margin: 0 0 1rem 0;
         color: var(--white);
     }
