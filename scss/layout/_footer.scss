@@ -14,8 +14,7 @@
             margin-right: 1rem;
         }
         &__icon{
-            width: fun.convertToRem(36);
-            height: fun.convertToRem(36);
+            font-size: fun.convertToRem(24);
             color: var(--white);
             &:hover{
                 color: var(--grey);

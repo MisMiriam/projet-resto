@@ -3,12 +3,12 @@
 
 #page__menu{
     // Section menu
-    .section__cta + section{
+    & section:has(h1){
         margin-bottom: 0;
         // Intro
         & div:first-child{
             text-align: left;
-            margin-bottom: fun.convertToRem(40);
+            margin-bottom: fun.convertToRem(32);
             & p {
                 margin: 0;
             }
@@ -18,21 +18,42 @@
         }
         // Menu
         & div:last-child{
+            max-width: 1200px;
             background-color: var(--white);
-            padding: fun.convertToRem(30) fun.convertToRem(24);
-            & article{
-                margin-bottom: fun.convertToRem(60);
-            }
+            padding: fun.convertToRem(15) 1rem;
             & img{
                 width: fun.convertToRem(128);
                 height: fun.convertToRem(128);
+                margin: 0 auto;
+            }
+            & article{
+                margin-bottom: fun.convertToRem(28);
             }
             & h3{
                 @include m.text-underline($offset: fun.convertToRem(20));
-                margin-bottom: fun.convertToRem(48);
+                margin-bottom: fun.convertToRem(32);
             }
-            & p.highlight{
+        }
+        /* Responsive */
+        @include m.lg{
+            & div:first-child{
+                margin-bottom: fun.convertToRem(40);
+            }
+            & div:last-child{
+                & article{
+                    margin-bottom: fun.convertToRem(60);
+                }
+                & h3{
+                    margin-bottom: fun.convertToRem(48);
+                }
+                & p.highlight{
                 margin-top: fun.convertToRem(48);
+                }
+            }
+        }
+        @include m.xl{
+            & div:last-child{
+                margin: 0 auto;
             }
         }
     }

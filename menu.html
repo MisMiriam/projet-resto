@@ -18,11 +18,25 @@
         <a href="index.html" class="navbar__icon"
           ><img src="logo.svg" alt="Logo Yummy Nouilles"
         /></a>
-        <ul>
-          <li><a class="navbar__link" href="index.html">Accueil</a></li>
-          <li><a class="navbar__link active" href="menu.html">Menu</a></li>
-          <li><a class="navbar__link" href="contact.html">Contact</a></li>
-        </ul>
+        <button type="button" class="toggle-menu-btn open-btn">
+          <span>
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </button>
+        <div class="toggle-menu">
+          <ul>
+            <li>
+              <button type="button" class="toggle-menu-btn close-btn">
+                <span>
+                  <i class="fa-solid fa-xmark"></i>
+                </span>
+              </button>
+            </li>
+            <li><a class="navbar__link" href="index.html">Accueil</a></li>
+            <li><a class="navbar__link active" href="menu.html">Menu</a></li>
+            <li><a class="navbar__link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main id="page__menu">
@@ -102,5 +116,6 @@
         </li>
       </ul>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>

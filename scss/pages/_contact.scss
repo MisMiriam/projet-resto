@@ -3,15 +3,24 @@
 
 #page__contact{
     // Section adresses
-    & .section__cta + section{
+    & section:has(h1){
         h1{
-            margin-bottom: fun.convertToRem(40) ;
+            margin-bottom: fun.convertToRem(20);
         }
         div{
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            gap: fun.convertToRem(40);
-            text-align: left;
+        }
+        @include m.lg{
+            h1{
+                margin-bottom: fun.convertToRem(40);  
+            }
+            div{
+                flex-direction: row;
+                gap: fun.convertToRem(40);
+                text-align: left;
+            }
         }
     }
 }

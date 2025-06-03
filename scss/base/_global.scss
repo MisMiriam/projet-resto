@@ -23,6 +23,15 @@
     @each $selecteur, $value in v.$line-height{
         --#{$selecteur}-line-height: #{$value};
     }
+    /* Responsive */
+    // Font-size
+    @each $selecteur, $value in v.$font-size-sm{
+        --#{$selecteur}-font-size-sm: #{$value};
+    }
+    // Line-height
+    @each $selecteur, $value in v.$line-height-sm{
+        --#{$selecteur}-line-height-sm: #{$value};
+    }
 }
 *{
     padding: 0;
@@ -32,8 +41,8 @@ body{
     @include m.text-config(   
         $font: var(--body-ff), 
         $fw: var( --body-font-weight),
-        $fs: var( --body-font-size),
-        $l-height: var(--body-line-height),
+        $fs: var( --body-font-size-sm),
+        $l-height: var(--body-line-height-sm),
         $clr: var(--black)
     );
 }
@@ -41,8 +50,8 @@ h1{
     @include m.text-config(   
         $font: var(--heading-ff), 
         $fw: var( --heading-font-weight),
-        $fs: var( --heading-font-size),
-        $l-height: var(--heading-line-height),
+        $fs: var( --heading-font-size-sm),
+        $l-height: var(--heading-line-height-sm),
         $clr: var(--black)
     );
     margin: 0;
@@ -51,21 +60,48 @@ h2, h3{
     @include m.text-config(   
         $font: var(--title-ff), 
         $fw: var( --title-font-weight),
-        $fs: var( --title-font-size),
-        $l-height: var(--title-line-height),
+        $fs: var( --title-font-size-sm),
+        $l-height: var(--title-line-height-sm),
         $clr: var(--black)
     );
     @include m.text-underline;
 }
 section{
-    margin: fun.convertToRem(30) 0;
-    padding: fun.convertToRem(30) fun.convertToRem(60);
+    margin: fun.convertToRem(15) 0;
+    padding: fun.convertToRem(15) fun.convertToRem(20);
     text-align: center;
 }
 img{
     max-width: 100%;
     height: auto;
+    display: block;
 }
+/* Utility classes */
 .highlight{
     font-weight: var(--body-highlight-font-weight);
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+/* Responsive */
+@include m.lg{
+    body{
+        font-size: var( --body-font-size);
+        line-height: var(--body-line-height);
+    }
+    h1{
+        font-size: var( --heading-font-size);
+        line-height: var(--heading-line-height);
+    }
+    h2, h3{
+        font-size: var( --title-font-size);
+        line-height: var(--title-line-height);
+    }
+    section{
+        margin: fun.convertToRem(30) 0;
+        padding: fun.convertToRem(30) fun.convertToRem(60);
+    }
 }

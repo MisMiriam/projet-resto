@@ -5,18 +5,23 @@ a.btn{
     @include m.text-config(
         $font: var(--title-ff), 
         $fw: var( --title-font-weight),
-        $fs: var( --title-font-size),
-        $l-height: var(--title-line-height),
+        $fs: var( --title-font-size-sm),
+        $l-height: var(--title-line-height-sm),
         $clr: var(--white)
     );
     text-decoration: none;
     text-transform: capitalize;
     background-color: var(--black);
-    padding: 1rem fun.convertToRem(40);
+    padding: fun.convertToRem(12) fun.convertToRem(32);
     display: inline-block;
     // utiliser des variables
     &:hover{
         color: darken($color: #ffffff, $amount: 10);
         background-color: lighten($color: #000000, $amount: 15);
+    }
+    @include m.lg{
+        padding: 1rem fun.convertToRem(40);
+        font-size: var( --title-font-size);
+        line-height: var(--title-line-height);
     }
 }

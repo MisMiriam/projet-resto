@@ -18,11 +18,27 @@
         <a href="index.html" class="navbar__icon"
           ><img src="logo.svg" alt="Logo Yummy Nouilles"
         /></a>
-        <ul>
-          <li><a class="navbar__link active" href="index.html">Accueil</a></li>
-          <li><a class="navbar__link" href="menu.html">Menu</a></li>
-          <li><a class="navbar__link" href="contact.html">Contact</a></li>
-        </ul>
+        <button type="button" class="toggle-menu-btn open-btn">
+          <span>
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </button>
+        <div class="toggle-menu">
+          <ul>
+            <li>
+              <button type="button" class="toggle-menu-btn close-btn">
+                <span>
+                  <i class="fa-solid fa-xmark"></i>
+                </span>
+              </button>
+            </li>
+            <li>
+              <a class="navbar__link active" href="index.html">Accueil</a>
+            </li>
+            <li><a class="navbar__link" href="menu.html">Menu</a></li>
+            <li><a class="navbar__link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main id="page__home">
@@ -100,46 +116,42 @@
       <section>
         <h2>Retouvez-nous sur les réseaux sociaux</h2>
         <div class="img-container">
-          <div class="col">
-            <img
-              src="./assets/img/social/chat.webp"
-              alt="Chat chanceux"
-              width="496"
-              height="496"
-            />
-            <img
-              src="./assets/img/social/plat.webp"
-              alt="Un bol de nouilles"
-              width="496"
-              height="496"
-            />
-            <img
-              src="./assets/img/social/bao.webp"
-              alt="Des baos"
-              width="496"
-              height="496"
-            />
-          </div>
-          <div class="col">
-            <img
-              src="./assets/img/social/chef.webp"
-              alt="Un chef qui cuisine"
-              width="496"
-              height="496"
-            />
-            <img
-              src="./assets/img/social/nouilles.webp"
-              alt="Des nouilles sèches"
-              width="496"
-              height="496"
-            />
-            <img
-              src="./assets/img/social/boisson.webp"
-              alt="Une bouteille de bière"
-              width="496"
-              height="496"
-            />
-          </div>
+          <img
+            src="./assets/img/social/chat.webp"
+            alt="Chat chanceux"
+            width="496"
+            height="496"
+          />
+          <img
+            src="./assets/img/social/plat.webp"
+            alt="Un bol de nouilles"
+            width="496"
+            height="496"
+          />
+          <img
+            src="./assets/img/social/bao.webp"
+            alt="Des baos"
+            width="496"
+            height="496"
+          />
+          <img
+            src="./assets/img/social/chef.webp"
+            alt="Un chef qui cuisine"
+            width="496"
+            height="496"
+          />
+          <img
+            src="./assets/img/social/nouilles.webp"
+            alt="Des nouilles sèches"
+            width="496"
+            height="496"
+          />
+          <img
+            src="./assets/img/social/boisson.webp"
+            alt="Une bouteille de bière"
+            width="496"
+            height="496"
+          />
         </div>
       </section>
       <!-- Section contact -->
@@ -173,5 +185,6 @@
         </li>
       </ul>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>
