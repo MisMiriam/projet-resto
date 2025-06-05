@@ -293,75 +293,6 @@ header {
   /* si l'élément input est coché, 
    * cache l'icône menu est affiche l'icône fermé
    */
-  /* display: flex;
-  justify-content: space-between;
-  padding: 1rem 1rem 1rem 3rem;
-  position: relative;
-  &__icon{
-      width: fun.convertToRem(72);
-      height: fun.convertToRem(72);
-  }
-  &__link{
-      @include m.text-config(
-          $font: var(--body-ff), 
-          $fw: var( --body-font-weight),
-          $fs: var( --body-font-size),
-          $l-height: var(--body-line-height),
-          $clr: var(--black)
-      );
-      text-decoration: none;
-      &:hover,
-      &.active{
-          @include m.text-underline;
-      }
-  }
-  .toggle-menu{
-      position: absolute;
-      top: 1rem;
-      right: 0;
-      z-index: 5;
-      padding: 0.5rem 1rem;
-      width: fun.convertToRem(300);
-      height: auto;
-      border-radius: 25px;
-      background-color: var(--white);
-      ul{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: fun.convertToRem(24);
-          list-style: none;
-          li:first-child{
-              align-self: flex-end;
-          }
-      }
-  }
-  .toggle-menu-btn{
-      background-color: transparent;
-      border: none;
-      padding: 0 0 0 1rem;
-      font-size: fun.convertToRem(32);
-  }
-  @include m.md{
-      justify-content: flex-start;
-      div.toggle-menu{
-          display: block;
-          position: static;
-          width: auto;
-          border: none;
-          background-color: inherit;
-          ul{
-              flex-direction: row;
-          }
-      }
-      .toggle-menu-btn,
-      li:has(.toggle-menu-btn){
-          display: none;
-      }
-     li {
-          margin-right: 1rem;
-      }
-  } */
 }
 .navbar__logo img {
   width: 4.5rem;
@@ -414,10 +345,8 @@ header {
   color: var(--black);
   text-decoration: none;
   cursor: pointer;
-  /* opacity: 1; */
 }
 .navbar__link:hover, .navbar__link.active {
-  /*  opacity: 0; */
   text-decoration: underline var(--primary);
   text-decoration-thickness: 0.1875rem;
   text-underline-offset: 0.25rem;
