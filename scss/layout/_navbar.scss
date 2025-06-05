@@ -1,8 +1,101 @@
 @use '../utils/fonctions' as fun;
 @use '../utils/mixins' as m;
 
+header{
+    position: sticky;
+    top: 0;
+}
 .navbar{
+    background-color: var(--grey);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    gap: 2rem;
+    &__logo img{
+        width: fun.convertToRem(72);
+        height: fun.convertToRem(72);   
+    }
+    &__icons{
+        cursor: pointer;
+        font-size: 1.75rem;
+    }
+    #close-icon{
+        display: none;
+    }
+    #toggle-menu{
+        display: none;
+    }
+/* si l'élément input est coché, 
+ * cache l'icône menu est affiche l'icône fermé
+ */    
+    #toggle-menu:checked ~ &__icons #menu-icon{
+        display: none;
+    }
+    #toggle-menu:checked ~ &__icons #close-icon{
+        display: block;
+    }
+    ul{
+        list-style: none;
+        background-color: hsla(244, 7%, 53%, 0.3);
+        backdrop-filter: blur(15px);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        z-index: 2;
+        margin: 0;
+        transition: height 0.5s ease;
+    }
+    #toggle-menu:checked ~ ul{
+        height: fun.convertToRem(170);
+    }
+    &__link{
+        @include m.text-config(
+            $font: var(--body-ff), 
+            $fw: var( --body-highlight-font-weight),
+            $fs: var( --body-font-size),
+            $l-height: var(--body-line-height),
+            $clr: var(--black)
+        );
+        text-decoration: none;
+        cursor: pointer;
+        //  transform: translateX(0);
+       /* opacity: 1; */
+        // transition: all 0.5s ease;
+        &:hover,
+        &.active{
+            //  transform: translateX(-100px);
+          /*  opacity: 0; */
+            @include m.text-underline;
+        }
+    }
+    @include m.md{
+        justify-content: flex-start;
+        &__icons{
+            display: none;
+        }
+        ul,
+        #toggle-menu:checked ~ ul{
+            position: static;
+            width: auto;
+            height: auto;
+            overflow: visible;
+            flex-direction: row;
+            justify-content: flex-start;
+            background: none;
+            backdrop-filter: none;
+        }
+    }
+    /* display: flex;
     justify-content: space-between;
     padding: 1rem 1rem 1rem 3rem;
     position: relative;
@@ -52,6 +145,7 @@
         font-size: fun.convertToRem(32);
     }
     @include m.md{
+        justify-content: flex-start;
         div.toggle-menu{
             display: block;
             position: static;
@@ -69,5 +163,5 @@
        li {
             margin-right: 1rem;
         }
-    }
+    } */
 }

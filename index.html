@@ -15,30 +15,23 @@
   <body>
     <header>
       <nav class="navbar">
-        <a href="index.html" class="navbar__icon"
+        <a href="index.html" class="navbar__logo"
           ><img src="logo.svg" alt="Logo Yummy Nouilles"
         /></a>
-        <button type="button" class="toggle-menu-btn open-btn">
-          <span>
-            <i class="fa-solid fa-bars"></i>
-          </span>
-        </button>
-        <div class="toggle-menu">
-          <ul>
-            <li>
-              <button type="button" class="toggle-menu-btn close-btn">
-                <span>
-                  <i class="fa-solid fa-xmark"></i>
-                </span>
-              </button>
-            </li>
-            <li>
-              <a class="navbar__link active" href="index.html">Accueil</a>
-            </li>
-            <li><a class="navbar__link" href="menu.html">Menu</a></li>
-            <li><a class="navbar__link" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
+        <!-- <div class="toggle-menu"> -->
+        <input type="checkbox" id="toggle-menu" />
+        <label for="toggle-menu" class="navbar__icons">
+          <i class="fa-solid fa-bars" id="menu-icon"></i>
+          <i class="fa-solid fa-xmark" id="close-icon"></i>
+        </label>
+        <ul>
+          <li>
+            <a class="navbar__link active" href="index.html">Accueil</a>
+          </li>
+          <li><a class="navbar__link" href="menu.html">Menu</a></li>
+          <li><a class="navbar__link" href="contact.html">Contact</a></li>
+        </ul>
+        <!-- </div> -->
       </nav>
     </header>
     <main id="page__home">
@@ -185,6 +178,6 @@
         </li>
       </ul>
     </footer>
-    <script src="./js/script.js"></script>
+    <!-- <script src="./js/script.js"></script> -->
   </body>
 </html>
